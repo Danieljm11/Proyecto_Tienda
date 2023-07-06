@@ -1,0 +1,103 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    color: black;
+    background-color: whitesmoke;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    background-color: #041a4a;
+    color: white;
+    padding: 20px;
+    width: auto;
+}
+
+.logo_tienda{
+    width: 50px;
+    margin-right: 10px;
+}
+
+.logo{
+    display: flex;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+li, a{
+
+    text-decoration: none;
+
+}
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li, a{
+
+    display: inline-block;
+    padding: 0px 15px;
+    font-size: 20px;
+    color: white;
+}
+
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+
+    color:#e5ae22;
+}
+
+main {
+    padding: 20px;
+}
+
+.ultimas_noticias {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-left: -17px;
+}
+
+.ultimas_noticias article {
+    padding: 15px;
+}
+
+.ultimas_noticias article img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.ultimas_noticias article h2 {
+    margin: 20px 0;
+}
+
+.ultimos_videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.ultimos_videos article iframe {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.ultimos_videos article h2 {
+    margin: 20px 0;
+}
+
