@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Login - Tienda Deportes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/login.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <a class="logo" href="index.html"><img class="logo_tienda"
+                                                   src="https://cdn-icons-png.flaticon.com/512/857/857455.png" alt="logo_tienda">
+                <h1>Tienda Deportes</h1>
+            </a>
+        </div>
+    </header>
+    <section class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form action="/login" method="post" id="loginForm">
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" name="username" required><br>
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña" name="password" required><br>
+            <button type="button" onclick="login()">Iniciar Sesión</button>
+        </form>
+    </section>
+    <footer class="bg-light text-center text-white">
+        <div class="container p-4 pb-0">
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/TiendaDeportes" target="_blank"><i class="fab fa-facebook"
+                                                                                     style="color:blue;"></i></a>
+                <!-- Twitter -->
+                <a href="https://www.twitter.com/TiendaDeportes" target="_blank"><i class="fab fa-twitter"
+                                                                                    style="color: #1da1f2;"></i></a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/TiendaDeportes" target="_blank"><i class="fab fa-instagram"
+                                                                                      style="color: purple;"></i></a>
+            </section>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            ©2023, Grupo 8, Desarrollo de Aplicaciones Web y Patrones
+        </div>
+    </footer>
+
+    <script>
+        function login() {
+            var username = document.getElementById("usuario").value;
+            var password = document.getElementById("contraseña").value;
+
+            // Credenciales preestablecidas para ejemplo (¡NO seguro para producción!):
+            var predefinedUsername = "admin";
+            var predefinedPassword = "1234";
+
+            if (username === predefinedUsername && password === predefinedPassword) {
+                alert("Inicio de sesión exitoso");
+                // Aquí puedes redirigir al usuario a la página de inicio después del inicio de sesión exitoso.
+                 window.location.href = "index.html"; // Cambia "index.html" por la URL de tu página principal.
+            } else {
+                alert("Credenciales incorrectas");
+            }
+        }
+    </script>
+</body>
+
+</html>

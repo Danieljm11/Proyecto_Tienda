@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Deportes</title>
+    <link href="style/index.css" rel="stylesheet" type="text/css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <a class="logo" href="index.html"><img class="logo_tienda"
+                src="https://cdn-icons-png.flaticon.com/512/857/857455.png" alt="logo_tienda">
+                <h1 id="header-title">Inicio </h1>
+            </a>
+        </div>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="mlb.html">MLB</a></li>
+                <li><a href="nba.html">NBA</a></li>
+                <li><a href="nfl.html">NFL</a></li>
+                <li><a href="mls.html">MLS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1 id="news-section-title">Ultimas Noticias</h1>
+            <div class="ultimas_noticias">
+                <article>
+                    <img src="https://media.cnn.com/api/v1/images/stellar/prod/221207091953-01-aaron-judge-april-2022.jpg?c=original"
+                        alt="Descripción de la imagen">
+                    <h2>Título de la noticia 1</h2>
+                </article>
+                <!-- Repite para otros artículos -->
+            </div>
+        </section>
+
+        <section>
+            <h1 id="videos-section-title">Ultimos Videos</h1>
+            <div class="ultimos_videos">
+                <article>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/KyDEUUI7LoA" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <h2>Título del vídeo 1</h2>
+                </article>
+                <!-- Repite para otros artículos -->
+            </div>
+        </section>
+    </main>
+    <footer class="bg-light text-center text-white">
+        <div class="container p-4 pb-0">
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a href="#" target="_blank"><i class="fab fa-facebook" style="color:blue;"></i></a>
+                <!-- Twitter -->
+                <a href="#" target="_blank"><i class="fab fa-twitter" style="color: #1da1f2;"></i></a>
+                <!-- Instagram -->
+                <a href="#" target="_blank"><i class="fab fa-instagram" style="color: purple;"></i></a>
+            </section>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            ©2023, Grupo 8, Desarrollo de Aplicaciones Web y Patrones
+        </div>
+    </footer>
+
+    <script>
+        // Contenido en inglés (predeterminado)
+        var contentEN = {
+            'header-title': 'Sports Page',
+            'news-section-title': 'Latest News',
+            'videos-section-title': 'Latest Videos'
+            // Agrega más contenido aquí si es necesario
+        };
+
+        // Contenido en español
+        var contentES = {
+            'header-title': 'Página Deportes',
+            'news-section-title': 'Últimas Noticias',
+            'videos-section-title': 'Últimos Videos'
+            // Agrega más contenido aquí si es necesario
+        };
+
+        var currentLanguage = 'en'; // Idioma predeterminado
+
+        // Función para establecer el contenido localizado
+        function setLocalizedContent() {
+            var content = currentLanguage === 'en' ? contentEN : contentES;
+            for (var key in content) {
+                if (content.hasOwnProperty(key)) {
+                    var element = document.getElementById(key);
+                    if (element) {
+                        element.textContent = content[key];
+                    }
+                }
+            }
+        }
+
+        // Cambiar el idioma
+        function changeLanguage() {
+            currentLanguage = currentLanguage === 'en' ? 'es' : 'en';
+            setLocalizedContent();
+        }
+
+        // Llamada inicial para establecer el contenido localizado
+        setLocalizedContent();
+    </script>
+</body>
+
+</html>
